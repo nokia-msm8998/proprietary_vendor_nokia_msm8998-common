@@ -108,6 +108,8 @@ PRODUCT_COPY_FILES += \
     vendor/nokia/msm8998-common/proprietary/product/lib64/vendor.qti.ims.rcsconfig@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.ims.rcsconfig@1.0.so \
     vendor/nokia/msm8998-common/proprietary/product/lib64/vendor.qti.imsrtpservice@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.imsrtpservice@2.0.so \
     vendor/nokia/msm8998-common/proprietary/product/lib64/vendor.qti.imsrtpservice@2.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.imsrtpservice@2.1.so \
+    vendor/nokia/msm8998-common/proprietary/system/bin/charger:$(TARGET_COPY_OUT_SYSTEM)/bin/charger \
+    vendor/nokia/msm8998-common/proprietary/system/lib64/libsuspend.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsuspend.so \
     vendor/nokia/msm8998-common/proprietary/vendor/bin/ATFWD-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ATFWD-daemon \
     vendor/nokia/msm8998-common/proprietary/vendor/bin/cdsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/cdsprpcd \
     vendor/nokia/msm8998-common/proprietary/vendor/bin/cnd:$(TARGET_COPY_OUT_VENDOR)/bin/cnd \
