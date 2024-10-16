@@ -505,8 +505,8 @@ PRODUCT_PACKAGES += \
     com.qti.dpmframework \
     dpmapi \
     qcrilhook \
-    android.hardware.health@2.1 \
-    manifest_android.hardware.drm@1.3-service.widevine
+    android.hardware.health@2.1.xml \
+    manifest_android.hardware.drm@1.3-service.widevine.xml
 
 PRODUCT_PACKAGES += \
     libimscamera_jni_libimscamera_jni_symlink64 \
