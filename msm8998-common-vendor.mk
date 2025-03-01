@@ -13,6 +13,7 @@ PRODUCT_COPY_FILES += \
     vendor/nokia/msm8998-common/proprietary/system_ext/etc/permissions/qcrilhook.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qcrilhook.xml \
     vendor/nokia/msm8998-common/proprietary/system_ext/etc/permissions/qti_libpermissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qti_libpermissions.xml \
     vendor/nokia/msm8998-common/proprietary/system_ext/etc/permissions/qti_permissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qti_permissions.xml \
+    vendor/nokia/msm8998-common/proprietary/vendor/etc/cacert_location.pem:$(TARGET_COPY_OUT_VENDOR)/etc/cacert_location.pem \
     vendor/nokia/msm8998-common/proprietary/vendor/etc/cne/mwqem.conf:$(TARGET_COPY_OUT_VENDOR)/etc/cne/mwqem.conf \
     vendor/nokia/msm8998-common/proprietary/vendor/etc/cne/profileMwqem.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/profileMwqem.xml \
     vendor/nokia/msm8998-common/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile1.xml \
@@ -68,9 +69,14 @@ PRODUCT_COPY_FILES += \
     vendor/nokia/msm8998-common/proprietary/vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc \
     vendor/nokia/msm8998-common/proprietary/vendor/etc/init/vendor.qti.rmt_storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.rmt_storage.rc \
     vendor/nokia/msm8998-common/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
+    vendor/nokia/msm8998-common/proprietary/vendor/etc/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
+    vendor/nokia/msm8998-common/proprietary/vendor/etc/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
+    vendor/nokia/msm8998-common/proprietary/vendor/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
     vendor/nokia/msm8998-common/proprietary/vendor/etc/seccomp_policy/imsrtp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/imsrtp.policy \
     vendor/nokia/msm8998-common/proprietary/vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/vendor.qti.hardware.dsp.policy \
     vendor/nokia/msm8998-common/proprietary/vendor/etc/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
+    vendor/nokia/msm8998-common/proprietary/vendor/etc/xtra_root_cert.pem:$(TARGET_COPY_OUT_VENDOR)/etc/xtra_root_cert.pem \
+    vendor/nokia/msm8998-common/proprietary/vendor/etc/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf \
     vendor/nokia/msm8998-common/proprietary/vendor/radio/qcril_database/qcril.db:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/qcril.db \
     vendor/nokia/msm8998-common/proprietary/vendor/radio/qcril_database/upgrade/0_initial.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/0_initial.sql \
     vendor/nokia/msm8998-common/proprietary/vendor/radio/qcril_database/upgrade/10_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/10_version_update_ecc_table.sql \
@@ -170,6 +176,7 @@ PRODUCT_PACKAGES += \
     ftm_fm_lib \
     android.hardware.bluetooth@1.0-impl-qti \
     com.dsi.ant@1.0-impl \
+    vendor.qti.gnss@4.0-impl \
     vendor.qti.hardware.alarm@1.0-impl \
     vendor.qti.hardware.bluetooth_sar@1.1-impl \
     vendor.qti.hardware.fm@1.0-impl \
@@ -198,24 +205,40 @@ PRODUCT_PACKAGES += \
     libQTEEConnector_vendor \
     libSecureUILib \
     libStDrvInt \
+    libasn1cper \
+    libasn1crt \
+    libasn1crtx \
     libbase64 \
     libbt-hidlclient \
     libbtnv \
+    libcdfw \
+    libcdfw_remote_api \
     libcne \
     libcneapiclient \
     libcneoplookup \
     libconfigdb \
     libcpion \
+    libdataitems \
     libdisp-aba \
     libdpmqmihal \
     libdrmfs \
     libdrmtime \
     libdsi_netctrl \
+    libgdtap \
     libhdcp1prov \
     libhdcp2p2prov \
     libhdcpsrm \
     libhdr_tm \
+    libizat_client_api \
+    libizat_core \
+    liblbs_core \
+    libloc_api_v02 \
+    libloc_socket \
+    liblocationservice \
+    liblocationservice_glue \
+    liblowi_client \
     liblqe \
+    libminksocket \
     libmm-hdcpmgr \
     libnetmgr \
     libnetmgr_common \
@@ -259,6 +282,9 @@ PRODUCT_PACKAGES += \
     libwqe \
     libwvhidl \
     libxml \
+    libxtadapter \
+    libxtwifi_server_protocol \
+    libxtwifi_server_protocol_uri_v3 \
     libwvdrmengine \
     qcrild_librilutils \
     qtibus \
@@ -273,6 +299,14 @@ PRODUCT_PACKAGES += \
     vendor.qti.data.factory@2.3 \
     vendor.qti.data.mwqem@1.0 \
     vendor.qti.data.slm@1.0 \
+    vendor.qti.gnss@1.0 \
+    vendor.qti.gnss@1.1 \
+    vendor.qti.gnss@1.2 \
+    vendor.qti.gnss@2.0 \
+    vendor.qti.gnss@2.1 \
+    vendor.qti.gnss@3.0 \
+    vendor.qti.gnss@4.0-service \
+    vendor.qti.gnss@4.0 \
     vendor.qti.hardware.alarm@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.1 \
@@ -373,6 +407,7 @@ PRODUCT_PACKAGES += \
     qcrilhook \
     android.hardware.health@2.1.xml \
     manifest_android.hardware.drm@1.3-service.widevine.xml \
+    vendor.qti.gnss@4.0-service.xml \
     adpl \
     adsprpcd \
     cdsprpcd \
@@ -398,6 +433,9 @@ PRODUCT_PACKAGES += \
     imsqmidaemon \
     imsrcsd \
     irsc_util \
+    loc_launcher \
+    lowi-server \
+    mlid \
     mm-pp-dpps \
     msm_irqbalance \
     netmgrd \
@@ -415,6 +453,9 @@ PRODUCT_PACKAGES += \
     tftp_server \
     thermal-engine \
     time_daemon \
+    xtra-daemon \
+    xtwifi-client \
+    xtwifi-inet-agent \
     dpmd
 
 PRODUCT_PACKAGES += \

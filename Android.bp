@@ -3315,6 +3315,53 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.gnss@4.0-impl",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libhidlbase",
+                "libutils",
+                "android.hardware.gnss@1.0",
+                "android.hardware.gnss@1.1",
+                "vendor.qti.gnss@1.0",
+                "vendor.qti.gnss@1.1",
+                "vendor.qti.gnss@1.2",
+                "vendor.qti.gnss@2.0",
+                "vendor.qti.gnss@2.1",
+                "vendor.qti.gnss@3.0",
+                "vendor.qti.gnss@4.0",
+                "libloc_core",
+                "libgps.utils",
+                "liblocation_api",
+                "liblocationservice_glue",
+                "liblbs_core",
+                "libdataitems",
+                "liblocationservice",
+                "libxtadapter",
+                "libizat_core",
+                "libizat_client_api",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.alarm@1.0-impl",
     owner: "nokia",
     strip: {
@@ -4217,6 +4264,81 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libasn1cper",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libasn1cper.so",
+            ],
+            shared_libs: [
+                "libasn1crtx",
+                "libasn1crt",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libasn1crt",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libasn1crt.so",
+            ],
+            shared_libs: [
+                "libasn1crtx",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libasn1crtx",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libasn1crtx.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libbase64",
     owner: "nokia",
     strip: {
@@ -4285,6 +4407,58 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libbtnv.so",
             ],
             shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcdfw",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcdfw.so",
+            ],
+            shared_libs: [
+                "libgps.utils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcdfw_remote_api",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcdfw_remote_api.so",
+            ],
+            shared_libs: [
+                "libgps.utils",
+                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -4469,6 +4643,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libdataitems",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libdataitems.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "libgps.utils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libdisp-aba",
     owner: "nokia",
     strip: {
@@ -4624,6 +4826,37 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libgdtap",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libgdtap.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "libgps.utils",
+                "liblog",
+                "libloc_core",
+                "libizat_core",
+                "liblbs_core",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libhdcp1prov",
     owner: "nokia",
     strip: {
@@ -4738,6 +4971,253 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libizat_client_api",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libizat_client_api.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libgps.utils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libizat_core",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libizat_core.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "libloc_core",
+                "libgps.utils",
+                "libloc_api_v02",
+                "libsqlite",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "liblbs_core",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/liblbs_core.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libizat_core",
+                "libloc_core",
+                "libgps.utils",
+                "libcrypto",
+                "libsqlite",
+                "libloc_api_v02",
+                "libmdmdetect",
+                "libperipheral_client",
+                "libpdmapper",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libloc_api_v02",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libloc_api_v02.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "libqmi_cci",
+                "libqmi_common_so",
+                "libloc_core",
+                "libgps.utils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libloc_socket",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libloc_socket.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libgps.utils",
+                "libqsocket",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "liblocationservice",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/liblocationservice.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libloc_core",
+                "libgps.utils",
+                "liblbs_core",
+                "libdataitems",
+                "liblowi_client",
+                "libizat_core",
+                "liblocation_api",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "liblocationservice_glue",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/liblocationservice_glue.so",
+            ],
+            shared_libs: [
+                "liblocationservice",
+                "libcutils",
+                "liblog",
+                "libloc_core",
+                "libgps.utils",
+                "libhardware_legacy",
+                "liblbs_core",
+                "libdataitems",
+                "liblocation_api",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "liblowi_client",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/liblowi_client.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "liblqe",
     owner: "nokia",
     strip: {
@@ -4756,6 +5236,33 @@ cc_prebuilt_library_shared {
                 "libqmi_cci",
                 "libqmi_common_so",
                 "libqmi_client_helper",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libminksocket",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libminksocket.so",
+            ],
+            shared_libs: [
+                "libqrtr",
+                "libcutils",
                 "liblog",
                 "libc++",
                 "libc",
@@ -6074,6 +6581,95 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libxtadapter",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libxtadapter.so",
+            ],
+            shared_libs: [
+                "libgps.utils",
+                "liblog",
+                "libloc_core",
+                "libizat_core",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libxtwifi_server_protocol",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libxtwifi_server_protocol.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libasn1cper",
+                "libasn1crt",
+                "libasn1crtx",
+                "libloc_core",
+                "libgps.utils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libxtwifi_server_protocol_uri_v3",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libxtwifi_server_protocol_uri_v3.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libgps.utils",
+                "libasn1cper",
+                "libasn1crt",
+                "libasn1crtx",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libwvdrmengine",
     owner: "nokia",
     strip: {
@@ -6492,6 +7088,271 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.data.slm@1.0.so",
             ],
             shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.gnss@1.0",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.gnss@1.0.so",
+            ],
+            shared_libs: [
+                "android.hardware.gnss@1.0",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.gnss@1.1",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.gnss@1.1.so",
+            ],
+            shared_libs: [
+                "android.hardware.gnss@1.0",
+                "vendor.qti.gnss@1.0",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.gnss@1.2",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.gnss@1.2.so",
+            ],
+            shared_libs: [
+                "android.hardware.gnss@1.0",
+                "vendor.qti.gnss@1.0",
+                "vendor.qti.gnss@1.1",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.gnss@2.0",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.gnss@2.0.so",
+            ],
+            shared_libs: [
+                "android.hardware.gnss@1.0",
+                "vendor.qti.gnss@1.0",
+                "vendor.qti.gnss@1.1",
+                "vendor.qti.gnss@1.2",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.gnss@2.1",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.gnss@2.1.so",
+            ],
+            shared_libs: [
+                "android.hardware.gnss@1.0",
+                "vendor.qti.gnss@1.0",
+                "vendor.qti.gnss@1.1",
+                "vendor.qti.gnss@1.2",
+                "vendor.qti.gnss@2.0",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.gnss@3.0",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.gnss@3.0.so",
+            ],
+            shared_libs: [
+                "android.hardware.gnss@1.0",
+                "vendor.qti.gnss@1.0",
+                "vendor.qti.gnss@1.1",
+                "vendor.qti.gnss@1.2",
+                "vendor.qti.gnss@2.0",
+                "vendor.qti.gnss@2.1",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.gnss@4.0-service",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.gnss@4.0-service.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libbase",
+                "libutils",
+                "libgps.utils",
+                "libqti_vndfwk_detect",
+                "libhidlbase",
+                "android.hardware.gnss@1.0",
+                "android.hardware.gnss@1.1",
+                "android.hardware.gnss@2.0",
+                "vendor.qti.gnss@1.0",
+                "vendor.qti.gnss@1.1",
+                "vendor.qti.gnss@1.2",
+                "vendor.qti.gnss@2.0",
+                "vendor.qti.gnss@2.1",
+                "vendor.qti.gnss@3.0",
+                "vendor.qti.gnss@4.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.gnss@4.0",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.gnss@4.0.so",
+            ],
+            shared_libs: [
+                "android.hardware.gnss@1.0",
+                "vendor.qti.gnss@1.0",
+                "vendor.qti.gnss@1.1",
+                "vendor.qti.gnss@1.2",
+                "vendor.qti.gnss@2.0",
+                "vendor.qti.gnss@2.1",
+                "vendor.qti.gnss@3.0",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -9268,6 +10129,15 @@ prebuilt_etc_xml {
     soc_specific: true,
 }
 
+prebuilt_etc_xml {
+    name: "vendor.qti.gnss@4.0-service.xml",
+    owner: "nokia",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
 cc_prebuilt_binary {
     name: "adpl",
     owner: "nokia",
@@ -10067,6 +10937,94 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "loc_launcher",
+    owner: "nokia",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/loc_launcher",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libgps.utils",
+                "libqti_vndfwk_detect",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "lowi-server",
+    owner: "nokia",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/lowi-server",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libgps.utils",
+                "liblog",
+                "libnl",
+                "libqmi_cci",
+                "libqmi_common_so",
+                "libdiag",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "mlid",
+    owner: "nokia",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/mlid",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblowi_client",
+                "libminksocket",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "mm-pp-dpps",
     owner: "nokia",
     target: {
@@ -10560,6 +11518,117 @@ cc_prebuilt_binary {
                 "libcutils",
                 "libqmi_cci",
                 "libqmi_common_so",
+                "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "xtra-daemon",
+    owner: "nokia",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/xtra-daemon",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "libcrypto",
+                "libssl",
+                "libsqlite",
+                "libgps.utils",
+                "libloc_core",
+                "libizat_core",
+                "liblbs_core",
+                "liblog",
+                "libandroid_net",
+                "libavservices_minijail",
+                "libcdfw_remote_api",
+                "libqcc_file_agent",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "xtwifi-client",
+    owner: "nokia",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/xtwifi-client",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libcrypto",
+                "libz",
+                "libsqlite",
+                "libqmiservices",
+                "libqmi_cci",
+                "libqmi_common_so",
+                "libgps.utils",
+                "libloc_core",
+                "libizat_core",
+                "liblbs_core",
+                "libavservices_minijail",
+                "libgdtap",
+                "libasn1cper",
+                "libasn1crt",
+                "libasn1crtx",
+                "libxtwifi_server_protocol",
+                "libxtwifi_server_protocol_uri_v3",
+                "liblowi_client",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "xtwifi-inet-agent",
+    owner: "nokia",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/xtwifi-inet-agent",
+            ],
+            shared_libs: [
+                "libc",
+                "libcutils",
+                "liblog",
+                "libcurl",
+                "libgps.utils",
+                "libavservices_minijail",
                 "libc++",
                 "libm",
                 "libdl",
