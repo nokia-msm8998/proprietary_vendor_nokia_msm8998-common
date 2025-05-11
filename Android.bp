@@ -11204,7 +11204,6 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/pm-service",
             ],
             shared_libs: [
-                "libutils-v33",
                 "libcutils",
                 "libutils",
                 "liblog",
