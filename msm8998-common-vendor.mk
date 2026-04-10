@@ -181,7 +181,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.fm@1.0-impl \
     vendor.qti.hardware.qccvndhal@1.0-impl \
     vendor.qti.hardware.qteeconnector@1.0-impl \
-    lib-imsSDP \
     lib-imscmservice \
     lib-imsdpl \
     lib-imsqimf \
@@ -245,6 +244,7 @@ PRODUCT_PACKAGES += \
     libnlnetmgr \
     liboemcrypto \
     libpdmapper \
+    libpdnotifier \
     libperipheral_client \
     libqcc_file_agent \
     libqcmaputils \
